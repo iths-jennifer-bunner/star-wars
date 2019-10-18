@@ -8,7 +8,7 @@ async function getData(){   //skapa async funktion, måste finnas för await ska
 async function getPlanet(link){
     let response = await fetch(link) 
     let responseBody = await response.json()
-    return responseBody.name
+    return responseBody
 }
 
 async function render(){
@@ -22,9 +22,19 @@ async function render(){
         p.innerText = item.name
         ul.append(newItem)//add it to the <ul> tag
         newItem.addEventListener("click",async function(){//lägger till en addEventListener och inom (säger till "beteendet")
-            let text = document.body.querySelector(".text")
             let homeworld = await getPlanet(item.homeworld) //call and await for the getPlanet() to return the array of users och där har vi även lagt in (item.homeworld) till funktionen, vilket är "länken"
-            text.innerText = homeworld
+            let name = document.body.querySelector(".name")
+            name.innerText = homeworld.name
+            let climate = document.body.querySelector(".climate")
+            climate.innerText = homeworld.climate
+            let terrain = document.body.querySelector(".terrain")
+            terrain.innerText = homeworld.terrain
+            let population = document.body.querySelector(".population")
+            population.innerText = homeworld.population
+            //andra alternativ man kan skriva ovanstående kod med 
+            // text.classList.add("foo")
+            // document.body.querySelector(".text").innerText = homeworld
+            // document.body.querySelector(".text").classList.add("foo")
         })
     }
 }
