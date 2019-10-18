@@ -1,0 +1,76 @@
+body{
+    margin: 0%;
+}
+.prototype{
+    display: none;
+    
+}
+.page{
+    display: flex;
+    justify-content: center;
+    height: 700px;
+}
+.container{
+    background-image: url(./images/jake-weirick-Q_RBVFFXR_g-unsplash\ \(2\).jpg);
+    background-position: center;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+/* högra sidan med display för planeter */
+.planets{
+    background-image: url(./images/sword-unsplash1024_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 65%;
+}
+
+/* text för planeterna */
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 3rem;
+}
+.people{
+    color: white;
+    size: 2rem;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+/*lista */
+.characters{
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+}
+.listOfPeople{
+    display: flex;
+    justify-content: center;
+}
+
+/*knappar */
+button{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 16px;
+    border: 2px solid red;
+    
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* margin-left: 20px; */
+
+}
+
+h1{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    margin: 50px 0px 0px 0px;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
